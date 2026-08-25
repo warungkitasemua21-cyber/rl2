@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>CFO Performance Dashboard SBCR</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<header>
+<h1>Executive CFO Performance Dashboard</h1>
+<p>Financial Performance | Rugi Laba | RKAP | Cost Analysis</p>
+<button onclick="netlifyIdentity.open()">Login</button>
+</header>
+
+<section class="cards">
+<div class="card">Pendapatan<h2 id="revenue">-</h2></div>
+<div class="card">Gross Profit<h2 id="gross">-</h2></div>
+<div class="card">Net Profit<h2 id="profit">-</h2></div>
+<div class="card">Expense<h2 id="expense">-</h2></div>
+<div class="card">Achievement RKAP<h2 id="rkap">-</h2></div>
+</section>
+
+<section class="panel">
+<h2>Upload Master Data</h2>
+<input type="file" accept=".xlsx">
+<p>Upload Rugi Laba dan RKAP untuk memperbarui dashboard.</p>
+</section>
+
+<section class="panel">
+<h2>Upload Buku Besar</h2>
+<input type="file" accept=".xlsx">
+<p>Menganalisa akun memburuk dan kenaikan biaya.</p>
+</section>
+
+<section class="panel">
+<h2>Analisa Performance</h2>
+<div id="analysis">
+Menunggu data upload.
+</div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
