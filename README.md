@@ -1,22 +1,13 @@
 
-# CFO Performance Dashboard SBCR
+# CFO Performance Dashboard SBCR V2
 
-Dashboard berbasis Netlify.
-
-Fitur:
-- Login Netlify Identity
-- Financial Overview
-- Rugi Laba Performance
-- RKAP Performance
-- Upload Master Excel
-- Upload Buku Besar
-- Cost Increase Analysis
+Update:
+- Upload master + tombol proses
+- KPI generate setelah proses
+- Account health monitoring
+- Upload buku besar hanya untuk akun memburuk
+- Multi akun selection
+- Siap dikembangkan dengan Excel parser dan AI analysis
 
 Deploy:
 GitHub -> Netlify
-
-Struktur:
-index.html
-styles.css
-app.js
-netlify/functions

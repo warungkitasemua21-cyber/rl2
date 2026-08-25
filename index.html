@@ -1,44 +1,49 @@
 
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>CFO Performance Dashboard SBCR</title>
+<title>CFO Performance Dashboard SBCR V2</title>
 <link rel="stylesheet" href="styles.css">
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
-<header>
 <h1>Executive CFO Performance Dashboard</h1>
-<p>Financial Performance | Rugi Laba | RKAP | Cost Analysis</p>
-<button onclick="netlifyIdentity.open()">Login</button>
-</header>
+<p>Rugi Laba | RKAP | Account Health Analysis</p>
 
 <section class="cards">
 <div class="card">Pendapatan<h2 id="revenue">-</h2></div>
 <div class="card">Gross Profit<h2 id="gross">-</h2></div>
-<div class="card">Net Profit<h2 id="profit">-</h2></div>
+<div class="card">Net Profit<h2 id="net">-</h2></div>
 <div class="card">Expense<h2 id="expense">-</h2></div>
-<div class="card">Achievement RKAP<h2 id="rkap">-</h2></div>
+<div class="card">RKAP Achievement<h2 id="rkap">-</h2></div>
 </section>
 
 <section class="panel">
-<h2>Upload Master Data</h2>
-<input type="file" accept=".xlsx">
-<p>Upload Rugi Laba dan RKAP untuk memperbarui dashboard.</p>
+<h2>1. Upload Master Rugi Laba & RKAP</h2>
+<input id="masterFile" type="file" accept=".xlsx">
+<button onclick="processMaster()">PROSES DATA</button>
+<div id="masterResult">Menunggu upload.</div>
 </section>
 
 <section class="panel">
-<h2>Upload Buku Besar</h2>
-<input type="file" accept=".xlsx">
-<p>Menganalisa akun memburuk dan kenaikan biaya.</p>
+<h2>2. Account Health Monitoring</h2>
+<p>Pilih akun yang memburuk untuk analisa detail:</p>
+
+<label><input type="checkbox" value="Biaya Transportasi"> Biaya Transportasi</label>
+<label><input type="checkbox" value="Biaya Maintenance"> Biaya Maintenance</label>
+<label><input type="checkbox" value="Biaya Operasional"> Biaya Operasional</label>
+
+<h3>Akun Terpilih</h3>
+<div id="selectedAccount">Belum ada akun dipilih</div>
 </section>
 
 <section class="panel">
-<h2>Analisa Performance</h2>
+<h2>3. Upload Buku Besar Khusus Akun Memburuk</h2>
+<input id="ledgerFile" type="file" accept=".xlsx">
+<button onclick="processLedger()">ANALISA BUKU BESAR</button>
+
 <div id="analysis">
-Menunggu data upload.
+Belum ada analisa.
 </div>
 </section>
 

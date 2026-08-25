@@ -1,15 +1,9 @@
 
 body{
 font-family:Arial;
-background:#211047;
+background:#24104f;
 color:white;
-margin:0;
 padding:30px;
-}
-header{text-align:center}
-button,input{
-padding:10px;
-margin:10px;
 }
 .cards{
 display:flex;
@@ -17,15 +11,16 @@ gap:15px;
 flex-wrap:wrap;
 }
 .card,.panel{
-background:#43267d;
-border-radius:15px;
+background:#43257c;
 padding:25px;
+border-radius:15px;
 margin-top:20px;
 }
 .card{
 width:180px;
 text-align:center;
 }
-.panel{
-margin-top:25px;
+button{
+padding:12px 20px;
+cursor:pointer;
 }
